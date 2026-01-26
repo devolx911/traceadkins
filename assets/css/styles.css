@@ -374,6 +374,19 @@ footer>.main-footer{
     }
 
 }
+@media(max-width: 31.1rem){
+    /* 497/16 = 31.0625rem */
+
+    main>a>img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    main {
+        height: 50vh;
+    }
+
+}
 
 @media(max-width: 44.4rem){
     /* 710/16 =  44.375*/
