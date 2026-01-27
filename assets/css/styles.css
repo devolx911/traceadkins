@@ -60,39 +60,6 @@ body{
 .site-wrapper{
     width: 100%;
 }
-/* ==============header=section======= */
-header{
-    height: 12vh;
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: #fff;
-}
-header>.site-logo>a{
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    color: var(---black-color);
-}
-nav>ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-nav>ul>li>a{
-    color: var(---nav-default-color---);
-    transition: all 0.3s ease-in-out;
-}
-nav>ul>li>a:hover{
-    color: var(---nav-hover-color---);
-}
-.open-navbar,.close-navbar{
-    visibility: hidden;
-    font-size: 1.7rem;
-}
-
 /* ============hero=section============== */
 /* .main-backgroung-image{
     height: 80vh;
@@ -171,7 +138,7 @@ main>.write-up>p{
 }
 .store-items>.item{
     width: 270px;
-    height: 330px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     background-color: var(---black-color);
