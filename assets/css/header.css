@@ -1,3 +1,63 @@
+/* =========reset default styles======= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+/* ===========root style================ */
+:root{
+    ---bg-color---: #cf9d49;
+    ---nav-default-color---: #9f9f9f;
+    ---nav-hover-color---: #636363;
+    ---button-color: #ababab;
+    ---white-color---: #fff;
+    ---black-color: #000;
+}
+html{
+    font-size: 62.5%;
+}
+/* ===========font style================= */
+h1{
+    font-size: 4.2rem;
+    line-height: 1.5;
+}
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+span{
+    font-size: 1.4rem;
+}
+/* ==========spacing ===========*/
+.section-m{
+    margin: 4rem 0;
+}
+
+.section-p{
+    padding: 0rem 2rem;
+}
+/* ==========body=========== */
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(---bg-color---);
+}
+.site-wrapper{
+    width: 100%;
+}
 /* ==============header=section======= */
 header{
     height: 12vh;
