@@ -60,6 +60,7 @@ main>.write-up{
     color: var(---white-color---);
     padding: 4rem 5rem;
     margin: 3.5rem 0;
+    gap: 1rem;
 }
 .news-container>.news-writeups{
     display: flex;
