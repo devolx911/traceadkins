@@ -1,0 +1,78 @@
+/* ===========root style================ */
+:root{
+    ---bg-color---: #cf9d49;
+    ---nav-default-color---: #9f9f9f;
+    ---nav-hover-color---: #636363;
+    ---button-color: #ababab;
+    ---white-color---: #fff;
+    ---black-color: #000;
+}
+html{
+    font-size: 62.5%;
+}
+/* ===========font style================= */
+h1{
+    font-size: 4.2rem;
+    line-height: 1.5;
+}
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+span{
+    font-size: 1.4rem;
+}
+/* ==========hero-section=========== */
+main{
+    width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+}
+main>img{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+main>.write-up{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(---white-color---);
+}
+
+/* ==========new-section============ */
+.news-wrapper>.news-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(---black-color);
+    color: var(---white-color---);
+    padding: 4rem 5rem;
+    margin: 3.5rem 0;
+}
+.news-container>.news-writeups{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;   
+    flex: 7;
+}
+
+.news-container>.news-image{
+    flex: 3;
+}
+
+.news-writeups.news-date>p{
+    color: #636363;
+    font-weight: 600;
+}
