@@ -109,7 +109,7 @@ const newsInfo = [
     },
     {
         id: "giotpngwtuwbnttnow",
-        image: "assets/images/news-images/TraceAdkins_WCYWcover_medium.avif", 
+        image: "assets/images/news-images/image2.avif", 
         date: "Sep 05, 2024",
         title: "Trace Adkins To Join Blake Shelton's Friends & Heroes Tour in 2025",
         details: "The run will include special appearances by Trace, as well as Craig Morgan and Deana Carter."
@@ -142,6 +142,27 @@ const newsInfo = [
         title: "Trace Adkins To Perform at Grand Ole Opry Opry Salutes The Troops Concert on Tuesday, May 21",
         details: "On Tuesday, May 21st Trace Adkins will perform at the Grand Ole Opry's Opry Salutes The Troops concert."
     },
+    {
+        id: "tngiegtnnturwr",
+        image: "assets/images/news-images/BehindTheMusic_201_0001_RT_medium.avif", 
+        date: "May 03, 2024",
+        title: "Trace Adkins Is Featured On Behind The Music",
+        details: "Trace Adkins takes fans Behind The Music as part of the iconic series now streaming on Paramount+."
+    },
+    {
+        id: "pppttitinnnertugbv",
+        image: "assets/images/news-images/20230823-8467_medium.avif", 
+        date: "Aug 24, 2023",
+        title: "TRACE ADKINS CELEBRATES 20TH ANNIVERSARY AS GRAND OLE OPRY MEMBER",
+        details: "Trace Adkins marked another career milestone last night (8/23), appearing on the iconic Grand Ole Opry to celebrate his 20th anniversary as an Opry member."
+    },
+    {
+        id: "trgtmwioijthbmuntwu",
+        image: "assets/images/news-images/Screen_Shot_2023-07-06_at_12.53.43_PM_medium.avif", 
+        date: "July 7, 2023",
+        title: "TRACE ADKINS TO DEBUT INSPIRING “SOMEWHERE IN AMERICA” MUSIC VIDEO EXCLUSIVELY ACROSS CMT ON JULY 7",
+        details: "Community-Minded Clip Filmed During Somewhere In America: A Concert For Mayfield Presented By KIOTI Tractor."
+    }
 ]
 
 function displayNews(){
@@ -157,7 +178,7 @@ function displayNews(){
                         <p>${date}</p>
                     </div>
                     <div class="news-title">
-                        <h2>$${title}</h2>
+                        <h2>${title}</h2>
                     </div>
                     <div class="news-info">
                         <p>${details}</p>

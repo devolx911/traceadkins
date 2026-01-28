@@ -60,7 +60,7 @@ body{
 }
 /* ==============header=section======= */
 header{
-    height: 12vh;
+    height: 10vh;
     
     display: flex;
     justify-content: space-between;
