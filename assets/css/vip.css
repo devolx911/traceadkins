@@ -1,0 +1,93 @@
+/* ===========root style================ */
+:root{
+    ---bg-color---: #cf9d49;
+    ---nav-default-color---: #9f9f9f;
+    ---nav-hover-color---: #636363;
+    ---button-color: #ababab;
+    ---white-color---: #fff;
+    ---black-color: #000;
+}
+html{
+    font-size: 62.5%;
+}
+/* ===========font style================= */
+h1{
+    font-size: 4.2rem;
+    line-height: 1.5;
+}
+h2{
+    font-size: 2.8rem;
+    line-height: 1.5;
+}
+p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+span{
+    font-size: 1.4rem;
+}
+/* ============hero=section============== */
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main>h1{
+    background-color: var(---black-color);
+    color: var(---white-color---);
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+}
+.vip-photo-section>h2{
+    color: var(---white-color---);
+    margin-bottom: 1rem;
+}
+.vip-photo-section>ul>li{
+    list-style-type:disc;
+    font-size: 1.5rem;
+    color: var(---white-color---);
+    margin-bottom: 0.5rem;
+    margin-left: 4rem;
+}
+.vip-merch-section>h2{
+    color: var(---white-color---);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+.vip-merch-section>ul>li{
+    list-style-type:disc;
+    font-size: 1.5rem;
+    color: var(---white-color---);
+    margin-bottom: 0.5rem;
+    margin-left: 4rem;
+}
+
+/* ===========vip-package-section============ */
+.vip-package-section{
+    margin-top: 2rem;
+}
+.vip-package-section>a{
+    color: var(---nav-hover-color---);
+    transition: all 0.3s ease-in-out;
+}
+.vip-package-section>a:hover{
+    text-decoration: underline;
+}
+.vip-package-writeup>p{
+    color: var(---white-color---);
+    margin: 1rem 0;
+}
+
+
+
