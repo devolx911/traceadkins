@@ -1,7 +1,7 @@
 // ===============selectors============
 const tourWrapper = document.getElementById("tour-wrapper-js");
 
-const tourInfo = [
+let tourInfo = [
     {
         id:"riljkfdbfafng",
         date: "Mar 7, 2026",
@@ -148,8 +148,10 @@ const tourInfo = [
     },
 ]
 
-function dispalyTour(){
-    tourWrapper.innerHTML = tourInfo.map((details)=>{
+export const getFirstFourTour = tourInfo.slice(0,4);
+
+export function dispalyTour(html,tourList){
+    html.innerHTML = tourList.map((details)=>{
         let {id,date,location,venue} = details;
         return `
             <div class="tour-container">
@@ -168,7 +170,7 @@ function dispalyTour(){
     }).join("")
 }
 
-dispalyTour()
+dispalyTour(tourWrapper,tourInfo)
 
 const getTicket = document.querySelectorAll(".get-ticket");
 
@@ -184,7 +186,7 @@ getTicket.forEach((button)=>{
         const location = matchingId.location;
         const data = matchingId.date;
 
-        let templateMessage = `Hi! i'm interested in getting tickets for the Trace Adkins Show at ${location} on ${data} .Please let me know the availability and pricing. Thanks!` 
+        let templateMessage = `Hi! i'm interested in getting tickets for the Trace Adkins Show at ${location} on ${data} .Please let me know the availability and pricing. Thanks!`;
 
         let url = `https://t.me/MY_OLX?text=${encodeURIComponent(templateMessage)}`;
 

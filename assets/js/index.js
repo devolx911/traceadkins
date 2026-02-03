@@ -1,53 +1,52 @@
-// ===========selectors============
+import { displayItems, getFirstFourItems } from "./store.js";
+import { dispalyTour, getFirstFourTour } from "./tour.js";
+
+
 const storeItemsWrapper = document.getElementById("store-items-wrapper-js");
+const tourWrapper = document.getElementById("tour-wrapper-js");
 
-// ============items details
-const itemsDetails = [
-    {
-        id: "sbkvnfbjntibnrw",
-        image: "assets/images/2026_TraceAdkins_front_cover_comp_grande.webp",
-        detail: "2026 Wall Calendar",
-        price: 11000
-    },
-    {
-        id: "owgimhmbptrhmbirt",
-        image: "assets/images/TA_HONKYTONK_RINGS_MOCK_grande.png",
-        detail: "Honky Tonk Badonkadonk - Throwback Tee",
-        price: 79000
-    },
-    {
-        id: "wpoowmvwmtiotwth",
-        image: "assets/images/TAHorseBandonkF_BWeb_grande.webp",
-        detail: "Charcoal Horse Tee",
-        price: 200000
-    },
-    {
-        id: "iojtptonitmninbtw",
-        image: "assets/images/TA-guitar-reviesd_grande.webp",
-        detail: "Autographed - Limited Edition - Trace Adkins Guitar",
-        price: 112000
-    }
-]
+displayItems(storeItemsWrapper, getFirstFourItems)
 
+dispalyTour(tourWrapper,getFirstFourTour)
 
-// ============function to display items==========
-function displayItems(){
-    storeItemsWrapper.innerHTML = itemsDetails.map((item)=>{
-        let {id,image,detail,price} = item;
-        return`
-            <div class="item">
-                <a href="https://t.me/MY_OLX" target="_blank" rel="noopener noreferrer">
-                    <div class="image-container">
-                        <img src="${image}" alt="${detail}">
-                    </div>
-                    <div class="item-writeup">
-                        <p>${detail}</p>
-                        <h2>$ ${price}</h2>
-                    </div>
-                </a>
-            </div>
-        `
-    }).join("")
-}
+const items = document.querySelectorAll(".item");
 
-displayItems()
+items.forEach((item)=>{
+
+    item.addEventListener("click", ()=>{
+        const itemId = item.dataset.id;
+    
+        const matchingItemId = getFirstFourItems.find((x)=>x.id === itemId);
+
+        const itemName = matchingItemId.detail;
+
+        let templateMessage = `Hi! i'm interested in getting the ${itemName} .Please let me know the availability.Thanks!`;
+        
+        let url = `https://t.me/MY_OLX?text=${encodeURIComponent(templateMessage)}`;
+
+        window.open(url, "_blank")
+        
+    })
+})
+
+const getTicket = document.querySelectorAll(".get-ticket");
+
+getTicket.forEach((button)=>{
+
+    button.addEventListener("click", ()=>{
+        const  ticketId = button.dataset.id;
+
+        const matchingId = getFirstFourTour.find((x)=>x.id === ticketId)
+
+        if(!matchingId) return
+
+        const location = matchingId.location;
+        const data = matchingId.date;
+
+        let templateMessage = `Hi! i'm interested in getting tickets for the Trace Adkins Show at ${location} on ${data} .Please let me know the availability and pricing. Thanks!`;
+
+        let url = `https://t.me/MY_OLX?text=${encodeURIComponent(templateMessage)}`;
+
+        window.open(url, "_blank")
+    })
+})
